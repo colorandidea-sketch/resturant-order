@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premium Restaurant Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --gold:#d4af37;
+      --dark:#0e0e0e;
+      --card:#1a1a1a;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+    body{
+      background:radial-gradient(circle at top,var(--dark),#000);
+      color:#fff;
+    }
+    header{
+      padding:60px 20px;
+      text-align:center;
+      background:linear-gradient(135deg,#000,var(--dark));
+      border-bottom:4px solid var(--gold);
+    }
+    header h1{
+      font-size:3rem;
+      letter-spacing:4px;
+      color:var(--gold);
+    }
+    header p{
+      opacity:.8;
+      margin-top:10px;
+    }
+    .menu{
+      max-width:1200px;
+      margin:60px auto;
+      padding:0 20px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+    .card{
+      background:linear-gradient(180deg,var(--card),#000);
+      border-radius:24px;
+      padding:24px;
+      box-shadow:0 20px 40px rgba(0,0,0,.6);
+      position:relative;
+      overflow:hidden;
+    }
+    .card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      border-radius:24px;
+      padding:1px;
+      background:linear-gradient(135deg,var(--gold),transparent);
+      -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+      -webkit-mask-composite:xor;
+      mask-composite:exclude;
+    }
+    .card img{
+      width:100%;
+      height:200px;
+      object-fit:cover;
+      border-radius:18px;
+    }
+    .card h3{
+      margin:16px 0 8px;
+      font-weight:600;
+    }
+    .price{
+      color:var(--gold);
+      font-weight:700;
+      margin-bottom:10px;
+    }
+    .card p{
+      font-size:.9rem;
+      opacity:.8;
+      line-height:1.5;
+    }
+    .cta{
+      text-align:center;
+      margin:80px 0;
+    }
+    .cta button{
+      background:var(--gold);
+      border:none;
+      padding:16px 40px;
+      font-size:1rem;
+      border-radius:40px;
+      cursor:pointer;
+      font-weight:600;
+      transition:.3s;
+    }
+    .cta button:hover{
+      transform:translateY(-3px);
+      box-shadow:0 15px 40px rgba(212,175,55,.5);
+    }
+    footer{
+      padding:30px;
+      text-align:center;
+      border-top:1px solid rgba(255,255,255,.1);
+      opacity:.7;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>RESTAURANT MENU</h1>
+  <p>Premium steaks, pasta & refreshing drinks</p>
+</header>
+
+<section class="menu">
+  <div class="card">
+    <img src="C:\Users\user009\Desktop\steak.jpg" alt="Beef Steak">
+    <h3>Beef Steak</h3>
+    <div class="price">SAR70</div>
+    <p>Perfectly grilled beef steak with rich flavor and tenderness.</p>
+  </div>
+
+  <div class="card">
+    <img src="C:\Users\user009\Desktop\chicken steak.png" alt="Chicken Steak">
+    <h3>Chicken Steak</h3>
+    <div class="price">SAR60</div>
+    <p>Juicy chicken steak marinated with chef special spices.</p>
+  </div>
+
+  <div class="card">
+    <img src="C:\Users\user009\Desktop\salmon.jpg" alt="Salmon Fillet">
+    <h3>Salmon Fillet</h3>
+    <div class="price">SAR50</div>
+    <p>Fresh salmon fillet cooked to perfection with herbs.</p>
+  </div>
+
+  <div class="card">
+    <img src="C:\Users\user009\Desktop\pasta.jpg" alt="Pasta">
+    <h3>Italian Pasta</h3>
+    <div class="price">SAR50</div>
+    <p>Classic Italian pasta tossed in creamy sauce.</p>
+  </div>
+
+  <div class="card">
+    <img src="C:\Users\user009\Desktop\drink.jpg" alt="Drinks">
+    <h3>Fresh Drinks</h3>
+    <div class="price">From SAR50</div>
+    <p>Mineral water, juices, milkshakes & cocktails.</p>
+  </div>
+</section>
+
+<div class="cta">
+  <button>Order Now</button>
+</div>
+
+<footer>
+  © 2025 Premium Restaurant · All Rights Reserved
+</footer>
+
+</body>
+</html>
